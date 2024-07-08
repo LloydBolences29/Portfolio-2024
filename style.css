@@ -1,0 +1,237 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+nav {
+  width: 100vw;
+  border-bottom: black 1px solid;
+}
+.nav-container {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-container {
+  width: auto;
+}
+
+.logo-container img {
+  /* padding: 10px 20px; */
+  width: 20%;
+}
+
+.icon-container {
+  display: none;
+}
+
+.link-container {
+  margin: 10px 20px 0 0;
+  column-count: 2;
+  display: flex;
+  justify-content: end;
+}
+
+.link-container a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: gray;
+  font-size: auto;
+}
+
+.links {
+  margin: 0;
+  padding-top: 10px;
+}
+
+#toggle-btn {
+  margin: 7px 0 0 0;
+}
+
+.hero-section {
+  margin-top: 5%;
+  width: 100vw;
+
+}
+
+.hero-main {
+  display: flex;
+  justify-content: center;
+  border-radius: 48px;
+  background: #fdfcfc;
+  box-shadow:  24px 24px 48px #ebebeb,
+               -24px -24px 48px #ffffff;
+}
+
+.hero-profile {
+  margin: 5% 8% 5% 0;
+  /* padding-right: 12%; */
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.hero-profile img {
+  height: auto;
+  width: 20vw;
+}
+
+.hero-about {
+  margin: 10% 10% 0 0;
+}
+
+/* Projects section */
+.project-section{
+  margin-top: 10%;
+  padding-top: 5%;
+  border-top: black 1px solid;
+}
+
+.card-container{
+  display: flex;
+  justify-content: center; 
+}
+
+/** Burger menu **/
+.icon-menu {
+  --gap: 5px;
+  --height-bar: 2.5px;
+  --pos-y-bar-one: 0;
+  --pos-y-bar-three: 0;
+  --scale-bar: 1;
+  --rotate-bar-one: 0;
+  --rotate-bar-three: 0;
+  width: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  cursor: pointer;
+  position: relative;
+}
+
+.bar {
+  position: relative;
+  height: var(--height-bar);
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: #9941fc;
+}
+
+.bar--1 {
+  top: var(--pos-y-bar-one);
+  transform: rotate(var(--rotate-bar-one));
+  transition: top 200ms 100ms, transform 100ms;
+}
+
+.bar--2 {
+  transform: scaleX(var(--scale-bar));
+  transition: transform 150ms 100ms;
+}
+
+.bar--3 {
+  bottom: var(--pos-y-bar-three);
+  transform: rotate(var(--rotate-bar-three));
+  transition: bottom 200ms 100ms, transform 100ms;
+}
+
+.check-icon:checked + .icon-menu > .bar--1 {
+  transition: top 200ms, transform 200ms 100ms;
+}
+
+.check-icon:checked + .icon-menu > .bar--3 {
+  transition: bottom 200ms, transform 200ms 100ms;
+}
+
+.check-icon:checked + .icon-menu {
+  --pos-y-bar-one: calc(var(--gap) + var(--height-bar));
+  --pos-y-bar-three: calc(var(--gap) + var(--height-bar));
+  --scale-bar: 0;
+  --rotate-bar-one: 45deg;
+  --rotate-bar-three: -45deg;
+}
+/* FIN ICON-MENU */
+
+/* toggle switch */
+.theme-checkbox {
+  --toggle-size: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 6.25em;
+  height: 3.15em;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(50%, #efefef),
+      color-stop(50%, #2a2a2a)
+    )
+    no-repeat;
+  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 0;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 99em;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--toggle-size);
+  margin: 15px 0 0 0;
+}
+
+.theme-checkbox::before {
+  content: "";
+  width: 2.25em;
+  height: 2.25em;
+  position: absolute;
+  top: 0.438em;
+  left: 0.438em;
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(50%, #efefef),
+      color-stop(50%, #2a2a2a)
+    )
+    no-repeat;
+  background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+  background-size: 205%;
+  background-position: 100%;
+  border-radius: 50%;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.theme-checkbox:checked::before {
+  left: calc(100% - 2.25em - 0.438em);
+  background-position: 0;
+}
+
+.theme-checkbox:checked {
+  background-position: 100%;
+}
+
+/**Media queries**/
+@media screen and (max-width: 600px) {
+  html {
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+  }
+}
+
+
+/* Footer Section */
+.footer-section{
+  background-color: whitesmoke;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!--Bootstrap CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Portfolio</title>
+  </head>
+
+  <body>
+    <!-- navbar section -->
+    <nav id="nav">
+      <div class="nav-container">
+        <div class="logo-container">
+          <img src="../img/logo.png" alt="" />
+        </div>
+
+        <div class="icon-container">
+          <input
+            hidden=""
+            class="check-icon"
+            id="check-icon"
+            name="check-icon"
+            type="checkbox"
+          />
+          <label class="icon-menu" for="check-icon">
+            <div class="bar bar--1"></div>
+            <div class="bar bar--2"></div>
+            <div class="bar bar--3"></div>
+          </label>
+        </div>
+
+        <div class="link-container">
+          <div>
+            <ul class="links">
+              <a href="">Home</a
+              ><a href="">About</a
+              ><a href="">Contact</a>
+            </ul>
+          </div>
+          <div class="links">
+            <input id="toggle-btn" type="checkbox" class="theme-checkbox" />
+          </div>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <!-- content section -->
+    <div class="hero-section">
+      <div class="hero-main container">
+        <div class="hero-profile">
+          <img src="./img/alt-hero.png" alt="" />
+        </div>
+
+        <!--Introduction-->
+
+        <div class="hero-about">
+          <h1>Hi, I'm ____</h1>
+          <p>
+            An aspiring front end web developer, currently looking for an
+            opportunity where i can showcase my skills when it comes in web
+            design and web developing.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <br class="br" />
+
+    <!--Projects section-->
+    <div class="project-section">
+      <div class="project-main">
+        <!--Cards-->
+        <div class="card-section">
+          <div class="card-container">
+            <div class="cards">
+              <h5>HTML</h5>
+            </div>
+
+            <div class="cards">
+              <h5>CSS</h5>
+            </div>
+
+            <div class="cards">
+              <h5>Javascript</h5>
+            </div>
+          </div>
+        </div>
+        <h1>Projects</h1>
+      </div>
+    </div>
+
+    <!--Footer Main-->
+    <div class="footer-section">
+      <div class="footer-main container">
+        <div class="temp-p">
+          <p>
+            ipsum Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Saepe numquam beatae quaerat, repellat suscipit ipsa quae
+            praesentium deserunt eligendi iusto voluptatibus excepturi ad id
+            doloribus dolorem doloremque! Alias, accusamus earum.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <!--Bootstrap js bundle-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
